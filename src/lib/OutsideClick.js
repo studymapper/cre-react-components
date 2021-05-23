@@ -26,7 +26,9 @@ export default class OutsideClick extends PureComponent {
         const { onOutsideClick } = this.props;
 
         if (onOutsideClick) {
-            document.addEventListener(this.EVENT, this.onOutsideClick);
+            setTimeout(() => {
+                document.addEventListener(this.EVENT, this.onOutsideClick);
+            }, 200);
         }
     }
 

@@ -11,7 +11,7 @@ export function withAsyncCaller(Component) {
     // This is required when using apiCaller or apiCallerProps
     // to be able to cancel the requests
     // simply globally assign a axios reference
-    const AXIOS = window._withAsyncCallerAxios || { isCancel: () => false };
+    const AXIOS = globalThis._withAsyncCallerAxios || { isCancel: () => false };
     // If using without axios cancellation, isCancel() should behave like not existing
 
     return class WithAsyncCaller extends PureComponent {

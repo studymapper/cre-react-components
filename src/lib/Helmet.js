@@ -40,7 +40,7 @@ class Helmet extends Component {
     }
 
     render() {
-        const href = window.location.href;
+        const href = globalThis?.location?.href;
         const { defaultConfig } = this.props;
         const {
             title: dcTitle, description: dcDescription, image: dcImage,

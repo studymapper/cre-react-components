@@ -5,12 +5,14 @@
   "author": "SchwSimon",
   "license": "MIT",
   "repository": "SchwSimon/creatella-react-components",
-  "dependencies": {},
+  "dependencies": {
+    "@babel/plugin-transform-modules-commonjs": "^7.14.0"
+  },
   "sideEffects": false,
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build-lib": "babel ./src/lib --out-dir ./lib --copy-files && delay 1",
+    "build-lib": "babel --plugins @babel/plugin-transform-modules-commonjs ./src/lib --out-dir ./lib --copy-files && delay 1",
     "clean-lib-folder": "rimraf ./lib/ && delay 1",
     "commit-push": "git add ./lib && git commit -m \"update build\" && git push origin master && delay 1",
     "lint": "eslint src/**/*.js",

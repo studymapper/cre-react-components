@@ -51,8 +51,8 @@ export default class ItemPickerView extends PureComponent {
         placeholderInput: '...',
         onChangeInput: null,
         renderActiveItemContent: null,
-        domPortalNode: window.document.body,
-        ...(window._ItemPickerView_defaultProps || {})
+        domPortalNode: globalThis?.document?.body,
+        ...(globalThis._ItemPickerView_defaultProps || {})
     }
 
     constructor(props) {

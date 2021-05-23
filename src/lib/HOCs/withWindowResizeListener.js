@@ -7,6 +7,9 @@ import React, { PureComponent } from 'react';
  * @returns {Component}
  */
 export function withWindowResizeListener(Component, delay = 100) {
+
+    if(!globalThis.document) return Component
+
     return class WithWindowResizeListener extends PureComponent {
         constructor(props) {
             super(props);

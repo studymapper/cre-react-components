@@ -1,5 +1,9 @@
 {
+    "globals": {
+        "globalThis": false
+    },
     "rules": {
-        "require-jsdoc": 0
+        "require-jsdoc": 0,
+        
     }
 }
