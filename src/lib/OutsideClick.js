@@ -24,7 +24,8 @@ export default class OutsideClick extends PureComponent {
 
     componentDidMount() {
         const { onOutsideClick } = this.props;
-
+        // On razzle part when the component mount is trigger onOutsideClick for obscure reason
+        // we add a sh*** code to avoid this. This is very dirthy
         if (onOutsideClick) {
             setTimeout(() => {
                 document.addEventListener(this.EVENT, this.onOutsideClick);
